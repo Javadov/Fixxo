@@ -1,0 +1,51 @@
+.__showcase {
+    margin-top: 65px;
+    
+    & > .container {
+      display: flex ;
+      justify-content: space-between;
+      align-items: center;
+  
+      & .sale {
+        position: relative;
+  
+        & .textonimg {
+          text-align: left;
+          position: absolute;
+          bottom: 100px;
+          left: 0;
+          width: 480px;
+          padding-left: 50px;
+  
+          & h1 {
+            font-size: $font-size-45;
+            font-weight: $font-weight-bold;
+          }
+  
+          & p {
+            padding-bottom: 50px;
+          }
+        }
+      }
+  
+      & .new-arrivals {
+        position: relative;
+  
+        & .textonimg {
+          text-align: left;
+          position: absolute;
+          bottom: 100px;
+          left: 0;
+  
+          padding-left: 50px;
+  
+          & h1 {
+            width: 120px;
+            font-size: $font-size-45;
+            font-weight: $font-weight-bold;
+            padding-bottom: 50px;
+          }
+        }
+      }
+    }
+  } 

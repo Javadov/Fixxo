@@ -10,18 +10,16 @@ const Navbar = () => {
                 <NavLink to="/">Fixxo.</NavLink> 
             </div>
             <div className="pages"> 
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/categories">Categories</NavLink>
-                <NavLink to="/products">Products</NavLink>
-                <NavLink to="/contacts">Contacts</NavLink>
+                <NavLink className="__pagelink" to="/" end>Home</NavLink>
+                <NavLink className="__pagelink" to="/categories" end>Categories</NavLink>
+                <NavLink className="__pagelink" to="/products" end>Products</NavLink>
+                <NavLink className="__pagelink" to="/contacts" end>Contacts</NavLink>
             </div>
             <div className="iconbar">
-                <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
-                <MenuIcon link="/compare" icon="fa-regular fa-code-compare" />
-                <MenuIcon link="/wishlist" icon="fa-regular fa-heart" />
-                <MenuIcon link="/shoppingbag" icon="fa-regular fa-magnifying-glass" />
-                    <span className="notification translate-middle badge rounded-pill">3</span>
-
+                <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" end/>
+                <MenuIcon link="/compare" icon="fa-regular fa-code-compare" end/>
+                <MenuIcon link="/wishlist" icon="fa-regular fa-heart" quantity="3" end/>
+                <MenuIcon link="/mybag" icon="fa-regular fa-shopping-bag" quantity="4" end/>
             </div>
         </div>    
     </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import ProductImage from '../assets/images/product-box-1.svg';
+import HalfRating from '../components/Rating';
 
 const FeaturedProducts = () => {
     return (
         <section className="__featured-products">
             <div className="container">
                 <h3>Featured Product</h3>
-                <div className="products" onsubmit="submitForm(event)">
+                <div className="products">
                     
                     <div className="card" id="card">
                         <div >
@@ -21,7 +22,7 @@ const FeaturedProducts = () => {
                             <span className="product-price">$35.00</span>
                         </div>
                     </div>
-
+                    <HalfRating />
                     <div className="card" id="card">
                         <div >
                             <img className="product-image" src={ProductImage} alt="product1" />

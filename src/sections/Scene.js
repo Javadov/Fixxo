@@ -4,7 +4,7 @@ import RightImage from '../assets/images/top-right.svg';
 
 const HeaderBody = () => {
   return (
-    <div className="__scene">
+    <div className="__scene d-none">
         <div className="container">
             <div className="h-b-l">
                 <img src={LeftImage} alt="" />

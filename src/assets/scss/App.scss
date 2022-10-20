@@ -1,12 +1,16 @@
 //FONTS
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap');
 
 //COLORS
 @import './general/variables';
 @import './general/base';
 
 //SECTIONS
+@import './sections/NotFound';
+
 @import './sections/Navbar';
 @import './sections/Scene';
 @import './sections/Showcase';
 @import './sections/FeaturedProducts';
+@import './sections/Footer';

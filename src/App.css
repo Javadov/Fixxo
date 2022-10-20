@@ -553,8 +553,8 @@ html, body {
   padding-left: 50px;
 }
 .__showcase > .container .sale .textonimg h1 {
-  font-size: var(--font-size-45);
-  font-weight: var(--font-weight-bold);
+  font-size: 2.8125rem;
+  font-weight: 700;
 }
 .__showcase > .container .sale .textonimg p {
   padding-bottom: 50px;
@@ -571,8 +571,8 @@ html, body {
 }
 .__showcase > .container .new-arrivals .textonimg h1 {
   width: 120px;
-  font-size: var(--font-size-45);
-  font-weight: var(--font-weight-bold);
+  font-size: 2.8125rem;
+  font-weight: 700;
   padding-bottom: 50px;
 }
 
@@ -688,14 +688,14 @@ html, body {
 .__featured-products > .container .products .card .card-body .rating > label {
   position: relative;
   width: 1.1em;
-  font-size: var(--font-size-18);
-  color: var(--color-theme-red);
+  font-size: 1.125rem;
+  color: #FF7373;
   cursor: pointer;
 }
 .__featured-products > .container .products .card .card-body .rating > label::before {
   content: "★";
   position: absolute;
-  color: var(--color-theme-red);
+  color: #FF7373;
   opacity: 0;
 }
 .__featured-products > .container .products .card .card-body .rating > label:hover:before, .__featured-products > .container .products .card .card-body .rating > label:hover ~ label:before {
@@ -708,7 +708,7 @@ html, body {
   opacity: 0.4;
 }
 .__featured-products > .container .products .card .card-body h3 {
-  font-size: var(--font-size-18);
-  font-weight: var(--font-weight-semibold);
+  font-size: 1.125rem;
+  font-weight: 600;
   margin: 10px 0 0 0;
 }

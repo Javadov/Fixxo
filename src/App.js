@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './views/HomeView';
 import Categories from './views/CategoriesView';
 import Products from './views/ProductsView';
+import ProductDetails from './views/ProductDetailsView';
+import Brands from './views/BrandViews';
 import Contacts from './views/ContactsView';
 import Search from './views/SearchView';
 import Compare from './views/CompareView';
@@ -17,6 +19,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/categories' element={<Categories />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/product' element={<ProductDetails />} />
+        <Route path='/:brandname' element={<Brands />} />
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/search' element={<Search />} />
         <Route path='/compare' element={<Compare />} />

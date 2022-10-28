@@ -1,144 +1,27 @@
-import React from 'react'
-import ProductImage from '../assets/images/product-box-1.svg';
-import HalfRating from '../components/Rating';
+import React, { useState } from 'react'
+import ProductCard from '../components/ProductCard';
 
 const FeaturedProducts = () => {
+
+    const [products, setProducts] = useState([
+        {id: 1, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145400_csalutenavy_v468_10.jpg", category: "Women", brandname: "MOS MOSH",  name: "Tan Alia Shirt", rating: "3", oldprice: "", price: "1499", },
+        {id: 2, img: "https://ean-images.booztcdn.com/guess/400x523/guehwta7679210_cblack_vbla_10.jpg", category: "Women", brandname: "GUESS", name: "CESSILY CONVERTIBLE XBODY", rating: "1", oldprice: "1299 kr", price: "875", },
+        {id: 3, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145220_cchipmunk_v709_10.jpg", category: "Women", brandname: "MOS MOSH", name: "Alyn Highneck Knit", rating: "4", oldprice: "", price: "1449", },
+        {id: 4, img: "https://ean-images.booztcdn.com/guess/400x523/guehwvb8558210_clightrum_vlgr_10.jpg", category: "Women", brandname: "Guess", name: "ABEY CROSSBODY FLAP", rating: "5", oldprice: "", price: "1400", },
+        {id: 5, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145370_cecru_v180_10.jpg", category: "Women", brandname: "MOS MOSH", name: "ABEY CROSSBODY FLAP", rating: "2", oldprice: "1299 kr", price: "875", },
+        {id: 6, img: "https://ean-images.booztcdn.com/stylein/400x523/styyacht_ccognac_10.jpg", category: "Women", brandname: "Stylein", name: "YACHT BAG", rating: "5", oldprice: "", price: "1799", },
+        {id: 7, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145370_cfadedrose_v298_10.jpg", category: "Women", brandname: "MOS MOSH", name: "Talli LS Knit", rating: "4", oldprice: "1299 kr", price: "1169", },
+        {id: 8, img: "https://ean-images.booztcdn.com/ted-baker-access/400x523/ake254143_c00black_v00_10.jpg", category: "Women", brandname: "Ted Baker", name: "NIKKEY", rating: "3", oldprice: "", price: "619", }
+    ])
+
     return (
         <section className="__featured-products">
             <div className="container">
                 <h3>Featured Product</h3>
-                <div className="products">
-                    
-                    <div className="card" id="card">
-                        <div >
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <button className="add-to-cart">Add to cart</button>
-                            <span className="product-price">$895</span>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <span className="product-price">$35.00</span>
-                        </div>
-                    </div>
-                    <HalfRating />
-                    <div className="card" id="card">
-                        <div >
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <button className="add-to-cart" >Add to cart</button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <span className="product-price">$1095</span>
-                        </div>
-                    </div>
-
-                    <div className="card" id="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" id="cardID">
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><button className="add-to-cart link"><i className="fa-regular fa-bag-shopping"></i></button></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <span className="product-price">$1195</span>
-                        </div>
-                    </div>
-
-                    <div className="card" id="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" >
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <h3>$35.00</h3>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" >
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <h3>$35.00</h3>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" >
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <h3>$35.00</h3>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" >
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <h3>$35.00</h3>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-img">
-                            <img className="product-image" src={ProductImage} alt="product1" />
-                            <ul className="card-menu" >
-                                <li><a className="link" href="#"><i className="fa-regular fa-heart"></i></a></li>
-                                <li><a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a></li> 
-                                <li><a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a></li> 
-                            </ul>
-                            <button href="#" className="button-quick-view"><span>QUICK VIEW</span></button>
-                        </div>
-                        <div className="card-body">
-                            <h6>Category</h6>
-                            <h4>Modern Black Blouse</h4>
-
-                            <h3>$35.00</h3>
-                        </div>
-                    </div>
+                <div className="products">                    
+                    {
+                        products.map(product => <ProductCard key={product.id} product={product} />)
+                    }
                 </div>
             </div>
         </section>

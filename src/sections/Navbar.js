@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="iconbar">
                 <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" end/>
                 <MenuIcon link="/compare" icon="fa-regular fa-code-compare" end/>
-                <MenuIcon link="/wishlist" icon="fa-regular fa-heart" quantity="3" end/>
+                <MenuIcon link="/wishlist" icon="fa-regular fa-heart" wished="3" end/>
                 <MenuIcon link="/mybag" icon="fa-regular fa-shopping-bag" quantity="4" end/>
             </div>
         </div>    

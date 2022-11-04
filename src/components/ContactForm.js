@@ -38,7 +38,7 @@ const ContactForm = () => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault() 
         setFormErrors(validate(contactForm))
     }
 

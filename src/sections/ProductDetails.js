@@ -1,27 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState }  from 'react'
 import { NavLink, useParams } from 'react-router-dom'
+import { ProductContext } from '../context'
 import Breadcrumb from '../components/Breadcrumb';
 import HalfRating from '../components/Rating';
 import SizeSelection from '../components/ProductDetails/SizeSelection';
-import ProductImages from '../components/ProductDetails/ProductImages';
 import ProductColor from '../components/ProductDetails/ProductColor';
 import ProductQuantity from '../components/ProductDetails/ProductQuantity';
 import ExtraDetails from '../components/ProductDetails/ExtraDetails';
-import ProductCard from '../components/ProductCard';
+import RelatedProducts from './RelatedProducts';
 
 const ProductDetails = () => {
-    const params = useParams()
 
-    const [products, setProducts] = useState([
-        {id: 1, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145400_csalutenavy_v468_10.jpg", category: "Women", brandname: "MOS MOSH",  name: "Tan Alia Shirt", rating: "3", oldprice: "", price: "1499", },
-        {id: 2, img: "https://ean-images.booztcdn.com/guess/400x523/guehwta7679210_cblack_vbla_10.jpg", category: "Women", brandname: "GUESS", name: "CESSILY CONVERTIBLE XBODY", rating: "1", oldprice: "1299 kr", price: "875", },
-        {id: 3, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145220_cchipmunk_v709_10.jpg", category: "Women", brandname: "MOS MOSH", name: "Alyn Highneck Knit", rating: "4", oldprice: "", price: "1449", },
-        {id: 4, img: "https://ean-images.booztcdn.com/guess/400x523/guehwvb8558210_clightrum_vlgr_10.jpg", category: "Women", brandname: "Guess", name: "ABEY CROSSBODY FLAP", rating: "5", oldprice: "", price: "1400", },
-        {id: 5, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145370_cecru_v180_10.jpg", category: "Women", brandname: "MOS MOSH", name: "ABEY CROSSBODY FLAP", rating: "2", oldprice: "1299 kr", price: "875", },
-        {id: 6, img: "https://ean-images.booztcdn.com/stylein/400x523/styyacht_ccognac_10.jpg", category: "Women", brandname: "Stylein", name: "YACHT BAG", rating: "5", oldprice: "", price: "1799", },
-        {id: 7, img: "https://ean-images.booztcdn.com/mos-mosh/400x523/mmh145370_cfadedrose_v298_10.jpg", category: "Women", brandname: "MOS MOSH", name: "Talli LS Knit", rating: "4", oldprice: "1299 kr", price: "1169", },
-        {id: 8, img: "https://ean-images.booztcdn.com/ted-baker-access/400x523/ake254143_c00black_v00_10.jpg", category: "Women", brandname: "Ted Baker", name: "NIKKEY", rating: "3", oldprice: "", price: "619", }
-    ])
+    const products = useContext(ProductContext)  
+
+    const {id} = useParams()
+    const [product, setProduct] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch(`https://win22-webapi.azurewebsites.net/api/products/${id}`)
+            setProduct(await result.json())
+        }
+        fetchData()
+    }, [])    
 
   return (
     <div className="__productsignal">
@@ -30,14 +31,34 @@ const ProductDetails = () => {
             <Breadcrumb currentPage="Product Signal"/>
 
             <div className="__productdetailsbox">
-                <ProductImages />
+                <div className="__productimages">
+                    <div className="container">
+                        <ul className="slides">
+                            <li id="slide1"><img src={product.imageName} className="product-image" alt={product.name} /></li>
+                            <li id="slide2"><img src={product.imageName} className="product-image" alt={product.name} /></li>
+                            <li id="slide3"><img src={product.imageName} className="product-image" alt={product.name} /></li>
+                        </ul>
+                    
+                        <ul className="thumbnails">
+                            <li>
+                                <a href="#slide1" ><img src={product.imageName} className="product-image" alt={product.name} /></a>
+                            </li>
+                            <li>
+                                <a href="#slide2" ><img src={product.imageName} className="product-image" alt={product.name} /></a>
+                            </li>
+                            <li>
+                                <a href="#slide3" ><img src={product.imageName} className="product-image" alt={product.name} /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div className="__productdetails">
-                    <h1>Modern Black Blouse</h1>
+                    <h1>{product.name}</h1>
                     <div className="__productartnr">
-                        <p>SKU: 12345670</p> <p>BRAND: The Northland</p>
+                        <p>SKU: 12345670</p> <p>Category: {product.category}</p>
                     </div>
                     <HalfRating  />
-                    <h2>$35.00</h2>
+                    <h2>$ {product.price}</h2>
                     <p>Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. <a href="#">(read more)</a></p>
                     <div className="__productsize">
                         <h1>Size:</h1>
@@ -68,16 +89,7 @@ const ProductDetails = () => {
             </div>
 
             <ExtraDetails />
-            <section className="related-products">
-            <div className="container">
-                <h3>Related Products</h3>
-                <div className="products">                    
-                    {
-                        products.map(product => <ProductCard key={product.id} product={product} />)
-                    }
-                </div>
-            </div>
-        </section>
+            <RelatedProducts />            
         </div>
     </div>
   )

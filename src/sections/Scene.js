@@ -1,10 +1,10 @@
 import React from 'react'
-import LeftImage from '../assets/images/top-left.svg';
-import RightImage from '../assets/images/top-right.svg';
+import LeftImage from '../assets/images/1.png';
+import RightImage from '../assets/images/2.png';
 
 const HeaderBody = () => {
   return (
-    <div className="__scene d-none">
+    <div className="__scene">
         <div className="container">
             <div className="h-b-l">
                 <img src={LeftImage} alt="" />

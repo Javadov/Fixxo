@@ -8,7 +8,7 @@
     align-items: left;
     width: 1110px;
 
-    & a {
+    & > a {
       text-decoration: none;
       color: $color-theme-red;
       text-align: center;
@@ -408,49 +408,49 @@
         }
       }
      
-      .content {
-          padding: 30px 0;
-          background-color: white;
-          font-weight: 300;
-          line-height: 30px;
-          font-size: 16px;
-          text-align: justify;
+      & .content {
+        padding: 30px 0;
+        background-color: white;
+        font-weight: 300;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: justify;
 
-          .__retur {
-            display: grid;          
-            grid-template-columns: repeat(2, 540px);
-            grid-template-rows: repeat(2, 100px);
-            gap: 30px;
-          }
-  
-          #frakt {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-          }
-  
-          #retur {
-            grid-column: 2 / -1;
-            grid-row: 1 / 2;
-          }
-  
-          #byte {
-            grid-column: 1 / 2;
-            grid-row: 2 / -1;
-          }
-  
-          #faq {
-            grid-column: 2 / -1;
-            grid-row: 2 / -1;
-          }  
+        .__retur {
+          display: grid;          
+          grid-template-columns: repeat(2, 540px);
+          grid-template-rows: repeat(2, 100px);
+          gap: 30px;
+        }
+
+        #frakt {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+        }
+
+        #retur {
+          grid-column: 2 / -1;
+          grid-row: 1 / 2;
+        }
+
+        #byte {
+          grid-column: 1 / 2;
+          grid-row: 2 / -1;
+        }
+
+        #faq {
+          grid-column: 2 / -1;
+          grid-row: 2 / -1;
+        }  
       }
     }
 
-    .related-products {
+    & .__related-products {
       margin-top: 65px;
     
       & > .container {
         width: 1110px;
-        display: inline-flex ;
+        display: flex ;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -458,14 +458,14 @@
         & h3 {
           font-size: $font-size-20;
           font-weight: $font-weight-bold;
-          margin-bottom: 30px;
+          margin: auto auto 30px auto;
+          margin-left: 0;
         }
     
         & .products {
-          display: flex;
-          flex-wrap: wrap;
+          display: inline-flex;
+          flex-wrap: nowrap;
           gap: 30px;
-          overflow: hidden;
         }
       }
     } 

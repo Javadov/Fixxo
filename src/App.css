@@ -629,7 +629,7 @@ html, body {
   align-items: left;
   width: 1110px;
 }
-.__productsignal > .container a {
+.__productsignal > .container > a {
   text-decoration: none;
   color: #FF7373;
   text-align: center;
@@ -994,26 +994,26 @@ html, body {
   grid-column: 2/-1;
   grid-row: 2/-1;
 }
-.__productsignal > .container .related-products {
+.__productsignal > .container .__related-products {
   margin-top: 65px;
 }
-.__productsignal > .container .related-products > .container {
+.__productsignal > .container .__related-products > .container {
   width: 1110px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.__productsignal > .container .related-products > .container h3 {
+.__productsignal > .container .__related-products > .container h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin: auto auto 30px auto;
+  margin-left: 0;
 }
-.__productsignal > .container .related-products > .container .products {
-  display: flex;
-  flex-wrap: wrap;
+.__productsignal > .container .__related-products > .container .products {
+  display: inline-flex;
+  flex-wrap: nowrap;
   gap: 30px;
-  overflow: hidden;
 }
 
 .__navbar {
@@ -1164,6 +1164,14 @@ html, body {
 }
 .__showcase > .container .sale {
   position: relative;
+  width: 1045px;
+  height: 563px;
+  background-color: #C8C0BE;
+}
+.__showcase > .container .sale img {
+  justify-items: right;
+  position: absolute;
+  right: 0;
 }
 .__showcase > .container .sale .textonimg {
   text-align: left;
@@ -1182,6 +1190,14 @@ html, body {
 }
 .__showcase > .container .new-arrivals {
   position: relative;
+  width: 635px;
+  height: 563px;
+  background-color: #E8E8E8;
+}
+.__showcase > .container .new-arrivals img {
+  justify-items: left;
+  position: absolute;
+  right: 0;
 }
 .__showcase > .container .new-arrivals .textonimg {
   text-align: left;

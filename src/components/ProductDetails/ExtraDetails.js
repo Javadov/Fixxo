@@ -7,13 +7,13 @@ const Tabs = () => {
         {
             id: 1,
             tabTitle: 'Description',
-            content: [<div>
-                        <p>Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard. </p>
+            content: [<>
+                        Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard.
                         <li> Village did removed enjoyed explain nor ham saw calling talking</li>
                         <li>Securing as informed declared or margaret.</li>
                         <li>Joy horrible moreover man feelings own shy.</li>
-                        <p>On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. </p>
-                    </div>]
+                        On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. 
+                    </>]
             
         },
         {
@@ -41,18 +41,18 @@ const Tabs = () => {
                             Mer information
                             Hitta snabba svar på dina frågor på våra kundservicesidor. Kundservice och FAQ
                         </div>
-                    </div>]
+                    </div>
+                    ]
         },
         {
             id: 4,
             tabTitle: 'Reviews',
-            content: [<p> <strong>Mycket snabb service och leverans</strong> 
+            content: [<> 
+                        <strong>Mycket snabb service och leverans</strong> 
                         Mycket snabb service och leverans. Lätt att handla.
                         Kristina,
                         2 dagar sedan
-                    </p>
-                
-            ]
+                      </>]
         }
     ];
 

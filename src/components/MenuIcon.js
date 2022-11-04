@@ -1,11 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const MenuIcon = ({ link, icon, quantity}) => {
+const MenuIcon = ({ link, icon, wished, quantity}) => {
   return (
     <NavLink className="circle" to={link}>
         <i className={icon}></i>
-        <span className="notification translate-middle badge rounded-pill">{quantity}</span>
+        <span className="notification translate-middle badge rounded-pill">{wished}</span>
+        <span className="notification translate-middle badge rounded-pill cart-quantity">{quantity}</span>
     </NavLink>
   )
 }

@@ -8,6 +8,15 @@
   
       & .sale {
         position: relative;
+        width: 1045px;
+        height: 563px;
+        background-color: #C8C0BE;
+
+        & img {
+          justify-items: right;
+          position: absolute;
+          right: 0;
+        }
   
         & .textonimg {
           text-align: left;
@@ -30,6 +39,15 @@
   
       & .new-arrivals {
         position: relative;
+        width: 635px;
+        height: 563px;
+        background-color: #E8E8E8;
+
+        & img {
+          justify-items: left;
+          position: absolute;
+          right: 0;
+        }
   
         & .textonimg {
           text-align: left;

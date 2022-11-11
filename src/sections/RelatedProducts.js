@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { ProductContext } from '../context'
+import { ProductContext } from '../contexts/context'
 import ProductCard from '../components/ProductCard';
 
 const RelatedProducts = () => {
 
     const products = useContext(ProductContext) 
-
+    
     return (
         <section className="__related-products">
             <div className="container">

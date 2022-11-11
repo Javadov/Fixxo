@@ -1,8 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import MenuIcon from '../components/MenuIcon'
+import { useShoppingCart } from '../contexts/ShoppingCardContext'
 
 const Navbar = () => {
+const { cartQuantity } = useShoppingCart()
+
   return (
     <div className="__navbar">
         <div className="container">
@@ -19,7 +22,10 @@ const Navbar = () => {
                 <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" end/>
                 <MenuIcon link="/compare" icon="fa-regular fa-code-compare" end/>
                 <MenuIcon link="/wishlist" icon="fa-regular fa-heart" wished="3" end/>
-                <MenuIcon link="/mybag" icon="fa-regular fa-shopping-bag" quantity="4" end/>
+                <button className="circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                    <i className="fa-regular fa-shopping-bag"></i>
+                    <span className="notification translate-middle badge rounded-pill">{cartQuantity}</span>
+                </button>
             </div>
         </div>    
     </div>

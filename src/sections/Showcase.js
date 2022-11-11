@@ -1,6 +1,6 @@
 import React from 'react'
-import Sale from '../assets/images/3.png';
-import New from '../assets/images/4.png';
+import Sale from '../assets/images/2-1.png';
+import New from '../assets/images/2-2.png';
 
 const Showcase = () => {
     return (

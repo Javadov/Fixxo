@@ -20,7 +20,7 @@
       object-position: top;
     }
 
-    .card-menu {
+    & .card-menu {
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -163,43 +163,43 @@
     }
   }
   
-  .__card-body {
-  text-align: center;      
+  & .__card-body {
+    text-align: center;      
 
-      & a {
-          color: $color-text;
-          font-size: $font-size-13;
-          font-weight: $font-weight-medium;
-          text-decoration: none;
-          text-transform: uppercase;
-      }
+    & a {
+        color: $color-text;
+        font-size: $font-size-13;
+        font-weight: $font-weight-medium;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 
-      & h4 {
-          font-size: $font-size-16;
-          font-weight: $font-weight-semibold;
-          text-transform: lowercase;
-          
-          &::first-line {
-            text-transform: capitalize;
-          }
-      }
+    & h4 {
+        font-size: $font-size-16;
+        font-weight: $font-weight-semibold;
+        text-transform: lowercase;
+        
+        &::first-line {
+          text-transform: capitalize;
+        }
+    }
 
-      & span {
-          color: $color-theme-red;
-      }
+    & span {
+        color: $color-theme-red;
+    }
 
-      & .product-price {
-      font-size: $font-size-18;
-      font-weight: $font-weight-semibold;
-      margin-bottom: 0;
+    & .product-price {
+    font-size: $font-size-18;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0;
 
-          & span {
-              text-decoration: line-through;
-              font-weight: $font-weight-regular;
-              margin-right: 15px;
-              color: $color-text;
-              font-size: $font-size-16;
-          }
-      }
+        & span {
+            text-decoration: line-through;
+            font-weight: $font-weight-regular;
+            margin-right: 15px;
+            color: $color-text;
+            font-size: $font-size-16;
+        }
+    }
   }
 }

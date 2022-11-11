@@ -1,6 +1,6 @@
 import React from 'react'
-import LeftImage from '../assets/images/1.png';
-import RightImage from '../assets/images/2.png';
+import LeftImage from '../assets/images/1-1.png';
+import RightImage from '../assets/images/1-2.png';
 
 const HeaderBody = () => {
   return (

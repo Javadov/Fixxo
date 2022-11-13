@@ -5,7 +5,7 @@ import React, { useState, createContext, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './views/HomeView';
 import Categories from './views/CategoriesView';
-import Products from './components/script';
+import Products from './views/ProductsView';
 import ProductDetails from './views/ProductDetailsView';
 import Brands from './views/BrandViews';
 import Contacts from './views/ContactsView';
@@ -22,27 +22,38 @@ function App() {
   const [products, setProducts] = useState({
     allProducts: [],
     featuredProducts: [],
-    saleProducts: []
+    saleProducts: [],
+    selectedProducts: []
   })  
 
   useEffect(() => {
     const fetchAllProducts = async () => {
       let result  = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-      setProducts({...products, allProducts: await result.json()})
+      let data = await result.json()
+      setProducts((oldProducts) =>{ return {...oldProducts, allProducts: data}})
     }
     fetchAllProducts()
 
     const fetchFeaturedProducts = async () => {
       let result  = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
-      setProducts({...products, featuredProducts: await result.json()})
+      let data = await result.json()
+      setProducts((oldProducts) =>{ return {...oldProducts, featuredProducts: data}})
     }
     fetchFeaturedProducts()
 
     const fetchSaleProducts = async () => {
       let result  = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-      setProducts({...products, saleProducts: await result.json()})
+      let data = await result.json()
+      setProducts((oldProducts) =>{ return {...oldProducts, saleProducts: data}})
     }
     fetchSaleProducts()
+
+    const fetchSelectedProducts = async () => {
+      let result  = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=3')
+      let data = await result.json()
+      setProducts((oldProducts) =>{ return {...oldProducts, selectedProducts: data}})
+    }
+    fetchSelectedProducts()
     
   }, [setProducts])
 

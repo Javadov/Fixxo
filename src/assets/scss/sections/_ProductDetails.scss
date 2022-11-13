@@ -228,11 +228,14 @@
               margin-top: 12px;
             }
   
-            & #myform {
-              justify-content: center;
+            & .___quantity {
+              display: flex;
+              justify-content: space-between;              
+              text-align: center;
 
-              & input {
+              & button {
                 height: 50px;
+                width: 36px;  
                 background-color: white;
                 font-size: $font-size-16;
                 font-weight: $font-weight-semibold;
@@ -241,14 +244,16 @@
                 outline: none;
               }
   
-              & .qty {
-                width: 40px; 
+              & .__qty {                
+                height: 50px;
+                width: 40px;
+                align-items: center;
+                text-align: center;
+                font-size: $font-size-16;
+                font-weight: $font-weight-semibold;
+                border: 1px solid black;
+                padding-top: 12px;
               }
-  
-              & input.qtyplus,
-              & input.qtyminus { 
-                width:36px; 
-              }  
             }
           }
 

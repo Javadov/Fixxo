@@ -9,6 +9,7 @@ import ProductColor from '../components/ProductDetails/ProductColor';
 import ProductQuantity from '../components/ProductDetails/ProductQuantity';
 import ExtraDetails from '../components/ProductDetails/ExtraDetails';
 import RelatedProducts from './RelatedProducts';
+import Carousel from '../components/Carousel';
 
 const ProductDetails = () => {
 
@@ -31,7 +32,7 @@ const ProductDetails = () => {
         <div className="__productsignal">
             <div className="container">
                 <NavLink to="/">Get 25% OFF at the Fixxo Selection - Shop Now!</NavLink>
-                <Breadcrumb currentPage="Product Signal"/>
+                <Breadcrumb currentPage="Product Signal" product={product} />
 
                 <div className="__productdetailsbox">
                     <div className="__productimages">
@@ -61,7 +62,7 @@ const ProductDetails = () => {
                             <p>SKU: 12345670</p> <p>Category: {product.category}</p>
                         </div>
 
-                        <HalfRating />
+                        <HalfRating value={product.rating}/>                        
 
                         <h2>$ {product.price}</h2>
                         <p>Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. <a href="#">(read more)</a></p>
@@ -94,7 +95,7 @@ const ProductDetails = () => {
                 </div>
 
                 <ExtraDetails />
-                <RelatedProducts />            
+                <RelatedProducts /> 
             </div>
         </div>
     )

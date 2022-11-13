@@ -1,32 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import $ from 'jquery';
 
 const ProductQuantity = () => {
 
-    $(document).ready(($) => {
-        $('.quantity').on('click', '.plus', function(e) {
-            let $input = $(this).prev('input.qty');
-            let val = parseInt($input.val());
-            $input.val( val+1 ).change();
-        });
- 
-        $('.quantity').on('click', '.minus', 
-            function(e) {
-            let $input = $(this).next('input.qty');
-            var val = parseInt($input.val());
-            if (val > 0) {
-                $input.val( val-1 ).change();
-            } 
-        });
-    });
+    const [quantity, setQuantity] = useState(1)
+
+    const handleDecrement = () => {
+        if(quantity > 1){
+            setQuantity(prevCount => prevCount - 1)
+        }
+    }
+
+    const handleIncrement = () => {
+        if(quantity < 10){
+            setQuantity(prevCount => prevCount + 1)
+        }
+    }
+    
 
   return (
-    
-    <form id='myform' method='POST' className='quantity' action='#'>
-        <input type='button' value='-' className='qtyminus minus' field='quantity' />
-        <input type='text' name='quantity' value='0' className='qty' />
-        <input type='button' value='+' className='qtyplus plus' field='quantity' />
-    </form>
+    <div className="___quantity">
+        <button onClick={handleDecrement} className='qtyminus minus'>-</button>
+        <div className="__qty">{quantity}</div>
+        <button onClick={handleIncrement} className='qtyminus plus'>+</button>
+    </div>
   )
 }
 
